@@ -8,6 +8,9 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - domoticz_config:/config
+    deploy:
+      constraints: 
+        - node.labels.domoticz.domoticz-data == true
 
 volumes:
   domoticz_config:
