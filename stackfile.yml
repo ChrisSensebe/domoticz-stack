@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  domoticz:
+    image: linuxserver/domoticz
+    ports:
+      - 8080:8080
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - domoticz_config:/config
+
+volumes:
+  domoticz_config:
